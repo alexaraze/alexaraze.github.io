@@ -11,6 +11,31 @@ body {
 
 }
 
+
+
+/* GRIDS */
+section {
+    padding-top: 200px;
+  }
+  .flexwrapper {
+    min-width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+.flexwrapper div {
+    display: flex;
+    width: 25%;
+    height: 25%;
+    min-width: 200px;
+    min-height: 200px;
+    border: 1px solid #000000;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+
 /* TEXT */
 @font-face {
     font-family: 'impact-label';
@@ -33,42 +58,69 @@ h3{
     color: #000;
 }
 
+.text-effect {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 24px;
+    transition: 15s;
+}
+
+.text-effect:hover {
+    top: -10px;
+}
+
+.text-effect:nth-child(2):hover {
+    top: 10px;
+}
 
 /* VISUALS */
-.swirl-background-container {
+#gradientwrapper {
     position: relative;
     width: 100vw;
     height: 100vh;
     overflow: hidden;
-}
-
-.swirl-background {
+    /* background: conic-gradient(black 0%, black 10%, white 10%, white 20%, black 20%, black 30%, white 30%, white 40%, black 40%, black 50%, white 50%, white 60%, black 60%, black 70%, white 70%, white 80%, black 80%, black 90%, white 90%, white 100%); */
+  }
+  #firstgradient{
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    transform-origin: center center;
-    animation: vortex 30s linear infinite;
+    left: -150vw;
+    top: -30vw;
+    width: 400vw;
+    height: 200vw;
+    /* background: conic-gradient(black 0%, black 10%, white 10%, white 20%, black 20%, black 30%, white 30%, white 40%, black 40%, black 50%, white 50%, white 60%, black 60%, black 70%, white 70%, white 80%, black 80%, black 90%, white 90%, white 100%); */
+    animation: rotate 30s infinite linear;
+  }
+  .gradientinner{
+    position: absolute;
+    left: 10%;
+    top: 10%;
+    width: 80%;
+    height: 80%;
+    border-radius: 100%;
     background: repeating-conic-gradient(
         from 0deg,
-        #d1d7e0,  /* Pastel Blue */
+        /* #f1f1f1,  */
         #e0b5d7,  /* Pastel Purple */
         #f7e0d1, /* Pastel Yellow */
-        #f1f1f1, /* White */
-        #f6c3d0 30deg  /* Pastel Pink */
-      );
-}
+        #d1d7e0,  /* Pastel Blue */
+        #f6c3d0 180deg  /* Pastel Pink */
+      );    
+    animation: rotate 50s infinite linear;
+    transform-origin: center;
+  }
+  @keyframes rotate {
+    from{transform:rotate(0deg);}
+    to{transform:rotate(360deg)}
+  }
 
-@keyframes vortex {
-    0% {
-        transform: scale(2) rotate(0deg);
-    }
-    100% {
-        transform: scale(4) rotate(360deg);
-    }
-}
+
+
+
+
+
 
 
 
