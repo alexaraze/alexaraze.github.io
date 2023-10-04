@@ -77,6 +77,8 @@ h3{
 }
 
 /* VISUALS */
+
+/* gradient swirl */
 #gradientwrapper {
     position: relative;
     width: 100vw;
@@ -116,15 +118,168 @@ h3{
     to{transform:rotate(360deg)}
   }
 
+/* printing, a ditto device */
+#ditto-wrapper {
+  position: absolute;
+  background:#000;
+  width: 300px;
+  height: 500px;
+}
+#ditto-text{
+  position: relative;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-style: italic;
+  font-size: 15px;
+  color: #f1f1f1;
+  left: 100px;
+  line-height: 200%;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+}
+#ditto-wrapper:hover > #ditto-text {
+  animation: typing 5s steps(40) forwards;
+}
+@keyframes typing {
+  from {
+      width: 0;
+  }
+  to {
+      width: 100%;
+  }
+}
+
+/* inevitability */
+#inevitability-wrapper {
+  position: absolute;
+  background:#000;
+  width: 300px;
+  height: 500px;
+}
+#nose-image{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url('Images/nose-image.png');
+  background-size: cover;
+  opacity: 1;
+  transition: opacity 0.5s ease-in;
+}
+#inevitability-wrapper:hover > #nose-image{
+  opacity: 0;
+}
+#inevitability-text{
+  position: relative;
+  font-family: Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  text-align: right;
+  color: #f1f1f1;
+  right: 30px;
+  top: 70px;
+  line-height: 100%;
+  white-space: nowrap;
+}
+
+/* age of anxiety */
+#strobe {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  animation: strobe .5s infinite;
+}
+
+@keyframes strobe {
+  0%, 50% {
+    background-color: blue;
+  }
+  25% {
+    background-color: yellow;
+  }
+  75% {
+    background-color: red;
+  }
+}
+
+.book-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 600px;
+  margin: 0 auto;
+  perspective: 1200px;
+  transform: rotate(0deg);
+  transition: transform 1s ease-in-out;
+}
+
+.book{
+  width: 300px;
+  height: 300px;
+  position: relative;
+}
+
+.book.left {
+  background: url('Images/book-left.png') no-repeat left/cover;
+  transform-origin: right;
+  transform: rotateY(0deg);
+  transition: transform 1s ease-in-out;
+}
+
+.book.right {
+  background: url('Images/book-right.png') no-repeat left/cover;
+  transform-origin: left;
+  transform: rotateY(0deg);
+  transition: transform 1s ease-in-out;
+}
+
+.book-wrapper:hover > .book.left {
+  transform: rotateY(90deg);
+  /* transform: rotate(90deg) */
+}
+
+.book-wrapper:hover > .book.right {
+  transform: rotateY(-90deg);
+  /* transform: rotate(90deg) */
+}
+
+.book-wrapper:hover {
+  transform: rotate(90deg)
+}
+
+/* eye */
+#eye {
+  margin: 0 auto;
+  width: 300px;
+  height: 300px;
+  background-color: rgba(0, 0, 0, 0.14);
+  border-radius: 100% 0px;
+  transform: rotate(45deg); 
+}
+#iris {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  background-color: brown;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#pupil {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
 
 
-
-
-
-
-
-
+/* clothing */
 .ascii {
     font: 6px monospace; 
     line-height:9px;
