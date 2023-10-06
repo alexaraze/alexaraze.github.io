@@ -1,9 +1,5 @@
-html {
-
-}
-
 body {
-    margin: 0;
+    margin: 33px;
 }
 
 #homepage {
@@ -11,9 +7,19 @@ body {
 
 }
 
+/* NAVIGATION */
+.click-anywhere {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+}
 
 
-/* GRIDS */
+/* GRIDS, WRAPPERS, ALIGNMENT */
 section {
     padding-top: 200px;
   }
@@ -27,14 +33,19 @@ section {
     display: flex;
     width: 25%;
     height: 25%;
-    min-width: 200px;
+    min-width: 100px;
     min-height: 200px;
-    border: 1px solid #000000;
+
     align-items: center;
-    justify-content: center;
   }
 
-
+.centre-page-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
 
 /* TEXT */
 @font-face {
@@ -46,38 +57,60 @@ section {
     src: url('Fonts/Impact Label Reversed.ttf') format('truetype');
 }
 
-h3{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    font-family:'impact-label-reversed';
+h1{
+    font-family:'impact-label';
     font-size:24px;
-    line-height:100%;
+    line-height:150%;
     color: #000;
+    white-space: nowrap;
+}
+p{
+  position: relative;
+  font-family:'impact-label-reversed';
+  font-size:14px;
+  line-height:110%;
+  color: #000;
 }
 
 .text-effect {
     position: absolute;
-    top: 50%;
+    top: 80%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
     font-size: 24px;
     transition: 15s;
 }
-
 .text-effect:hover {
-    top: -10px;
+    transform: translateY(10px);
 }
 
-.text-effect:nth-child(2):hover {
-    top: 10px;
+#responsibility-text{
+  margin: 0 0 0 320px;
+  width: 20px;
 }
+
+/* #strobe-text {
+  font-size: 200px;
+  font-family: impact-label-reversed;
+  color: white;
+  animation: strobe .5s infinite;
+  z-index: -1;
+}
+@keyframes strobe {
+  0%, 50% {
+    color: blue;
+  }
+  25% {
+    color: yellow;
+  }
+  75% {
+    color: red;
+  }
+} */
+
 
 /* VISUALS */
-
 /* gradient swirl */
 #gradientwrapper {
     position: relative;
@@ -191,17 +224,7 @@ h3{
   animation: strobe .5s infinite;
 }
 
-@keyframes strobe {
-  0%, 50% {
-    background-color: blue;
-  }
-  25% {
-    background-color: yellow;
-  }
-  75% {
-    background-color: red;
-  }
-}
+
 
 .book-wrapper {
   display: flex;
