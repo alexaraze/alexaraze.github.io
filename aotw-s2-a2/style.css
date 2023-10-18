@@ -2,6 +2,7 @@ body {
     margin: 0;
     padding: 0;
     height: 100vh;
+    
 }
 
 .water {
@@ -13,6 +14,7 @@ body {
     width: 100vw;
     position: relative;
     overflow: hidden;
+    cursor: url('Images/bubbles.png'), auto;
 }
 
 .sun-rays {
@@ -78,6 +80,10 @@ body {
     animation: waves 10s infinite alternate;
 }
 
+input {
+    display: none;
+}
+
 @keyframes waves {
     0% {
         transform: rotate(-4deg);
@@ -89,12 +95,14 @@ body {
 
 .fish{
     position: absolute;
-    width: 40vw;
+    width: 100vw;
     height: 20vh;
-    animation: swim 30s infinite linear;
+    animation: swimandflip 25s forwards infinite linear;
+    cursor: url('Images/feed.png'), auto;
 }
 
 #fish-1{
+    width: 120vw;
     top: 20%;
     left: 100px;
     background: url('Images/fish-1.png') no-repeat;
@@ -102,6 +110,7 @@ body {
 }
 
 #fish-2{
+    animation-play-state: paused;
     top: 35%;
     left: 100px;
     background: url('Images/fish-2.png') no-repeat;
@@ -113,6 +122,8 @@ body {
     left: 100px;
     background: url('Images/fish-3.png') no-repeat;
     background-size: contain; 
+    transform: scaleX(-1);
+    animation-play-state: paused;
 }
 
 #fish-4{
@@ -120,6 +131,7 @@ body {
     left: 100px;
     background: url('Images/fish-4.png') no-repeat;
     background-size: contain; 
+    animation-play-state: paused;
 }
 
 #fish-5{
@@ -127,6 +139,7 @@ body {
     left: 100px;
     background: url('Images/fish-5.png') no-repeat;
     background-size: contain; 
+    animation-play-state: paused;
 }
 
 #fish-6{
@@ -134,6 +147,7 @@ body {
     left: 100px;
     background: url('Images/fish-6.png') no-repeat;
     background-size: contain; 
+    animation-play-state: paused;
 }
 
 #fish-7{
@@ -141,21 +155,51 @@ body {
     left: 100px;
     background: url('Images/fish-7.png') no-repeat;
     background-size: contain; 
+    animation-play-state: paused;
 }
 
-
-
-
-
-@keyframes swim {
+@keyframes swimandflip {
     0% {
-        transform: translateX(0vw);
+        transform: translateX(-100%) scaleX(1);
+    }
+    45% {
+        transform: translateX(100%) scaleX(1);
     }
     50% {
-        transform: translateX(50vw);
+        transform: translateX(100%);
+    }
+    55% {
+        transform: translateX(100%) scaleX(-1);
+    }
+    95% {
+        transform: translateX(-100%) scaleX(-1);
     }
     100% {
-        transform: translateX(100vw);
-        transform: translateX(100%) rotateY(180deg);
+        transform: translateX(-100%) scaleX(1);
     }
 }
+
+#fish1check:checked ~ .water > #fish-2 {
+    animation-play-state: running;
+}
+#fish2check:checked ~ .water > #fish-3 {
+    animation-play-state: running;
+}
+#fish3check:checked ~ .water > #fish-4 {
+    animation-play-state: running;
+}
+#fish4check:checked ~ .water > #fish-5 {
+    animation-play-state: running;
+}
+#fish5check:checked ~ .water > #fish-6 {
+    animation-play-state: running;
+}
+#fish6check:checked ~ .water > #fish-7 {
+    animation-play-state: running;
+}
+#fish7check:checked ~ .water > #fish-2 {
+    animation-play-state: running;
+}
+
+
+
