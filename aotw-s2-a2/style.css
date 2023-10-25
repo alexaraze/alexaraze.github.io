@@ -97,14 +97,13 @@ body {
     position: absolute;
     width: 100vw;
     height: 20vh;
-    animation: swimandflip 25s forwards infinite linear;
+    animation: swimandflip 40s forwards infinite linear;
     cursor: url('Images/feed.png'), auto;
 }
 
 #fish-1{
-    width: 120vw;
     top: 20%;
-    left: 100px;
+    left: 70%;
     background: url('Images/fish-1.png') no-repeat;
     background-size: contain; 
     opacity: 1;
@@ -112,8 +111,8 @@ body {
 }
 
 #fish-2{
-    top: 35%;
-    left: 100px;
+    top: 33%;
+    left: 70%;
     background: url('Images/fish-2.png') no-repeat;
     background-size: contain; 
     animation-play-state: paused;
@@ -123,7 +122,7 @@ body {
 
 #fish-3{
     top: 40%;
-    left: 100px;
+    left: 70%;
     background: url('Images/fish-3.png') no-repeat;
     background-size: contain; 
     transform: scaleX(-1);
@@ -133,8 +132,8 @@ body {
 }
 
 #fish-4{
-    top: 55%;
-    left: 100px;
+    top: 50%;
+    left: 70%;
     background: url('Images/fish-4.png') no-repeat;
     background-size: contain; 
     animation-play-state: paused;
@@ -143,8 +142,8 @@ body {
 }
 
 #fish-5{
-    top: 65%;
-    left: 100px;
+    top: 58%;
+    left: 70%;
     background: url('Images/fish-5.png') no-repeat;
     background-size: contain; 
     animation-play-state: paused;
@@ -153,8 +152,8 @@ body {
 }
 
 #fish-6{
-    top: 78%;
-    left: 100px;
+    top: 73%;
+    left: 70%;
     background: url('Images/fish-6.png') no-repeat;
     background-size: contain; 
     animation-play-state: paused;
@@ -163,8 +162,8 @@ body {
 }
 
 #fish-7{
-    top: 90%;
-    left: 100px;
+    top: 80%;
+    left: 70%;
     background: url('Images/fish-7.png') no-repeat;
     background-size: contain; 
     animation-play-state: paused;
@@ -220,77 +219,42 @@ body {
 
 /* CHECKBOXES */
 
-/* input {
+input {
     display: none;
-} */
+}
 
-#fish1check:checked ~ .water > label[for="fish2check"] > #fish-2 {
+#fish1check:checked ~ .water > label[for="fish2check"] > #fish-2,
+#fish2check:checked ~ .water > label[for="fish3check"] > #fish-3,
+#fish3check:checked ~ .water > label[for="fish4check"] > #fish-4,
+#fish4check:checked ~ .water > label[for="fish5check"] > #fish-5,
+#fish5check:checked ~ .water > label[for="fish6check"] > #fish-6,
+#fish6check:checked ~ .water > label[for="fish7check"] > #fish-7,
+#revivecheck:checked ~ .water > label[for="fish1check"] > #fish-1 {
     animation-play-state: running;
     opacity: 1;
     pointer-events: all;
 }
-#fish2check:checked ~ .water > label[for="fish3check"] > #fish-3 {
-    animation-play-state: running;
+
+#fish7check:checked ~ .water > label[for="foodcheck"] > #food,
+#foodcheck:checked ~ .water > label[for="revivecheck"] > #revive {
     opacity: 1;
-}
-#fish3check:checked ~ .water > label[for="fish4check"] > #fish-4 {
-    animation-play-state: running;
-    opacity: 1;
-}
-#fish4check:checked ~ .water > label[for="fish5check"] > #fish-5 {
-    animation-play-state: running;
-    opacity: 1;
-}
-#fish5check:checked ~ .water > label[for="fish6check"] > #fish-6 {
-    animation-play-state: running;
-    opacity: 1;
-}
-#fish6check:checked ~ .water > label[for="fish7check"] > #fish-7 {
-    animation-play-state: running;
-    opacity: 1;
-}
-#fish7check:checked ~ .water > label[for="foodcheck"] > #food {
-    opacity: 1;
+    pointer-events: all;
 }
 
-#foodcheck:checked ~ .water > label[for="fish1check"] > #fish-1, #foodcheck:checked ~ .water > label[for="fish2check"] > #fish-2 {
+#foodcheck:checked ~ .water > label[for="fish1check"] > #fish-1, 
+#foodcheck:checked ~ .water > label[for="fish2check"] > #fish-2,
+#foodcheck:checked ~ .water > label[for="fish3check"] > #fish-3,
+#foodcheck:checked ~ .water > label[for="fish4check"] > #fish-4,
+#foodcheck:checked ~ .water > label[for="fish5check"] > #fish-5,
+#foodcheck:checked ~ .water > label[for="fish6check"] > #fish-6,
+#foodcheck:checked ~ .water > label[for="fish7check"] > #fish-7 {
     animation-play-state: paused;
     opacity: 0;
     pointer-events: none;
 }
 
-#foodcheck:checked ~ .water > label[for="fish3check"] > #fish-3 {
-    animation-play-state: paused;
-    opacity: 0;
-}
-#foodcheck:checked ~ .water > label[for="fish4check"] > #fish-4 {
-    animation-play-state: paused;
-    opacity: 0;
-}
-#foodcheck:checked ~ .water > label[for="fish5check"] > #fish-5 {
-    animation-play-state: paused;
-    opacity: 0;
-}
-#foodcheck:checked ~ .water > label[for="fish6check"] > #fish-6 {
-    animation-play-state: paused;
-    opacity: 0;
-}
-#foodcheck:checked ~ .water > label[for="fish7check"] > #fish-7 {
-    animation-play-state: paused;
-    opacity: 0;
-}
-#foodcheck:checked ~ .water > label[for="foodcheck"] > #food {
-    opacity: 0;
-}
-#foodcheck:checked ~ .water > label[for="revivecheck"] > #revive {
-    opacity: 1;
-}
-
-#revivecheck:checked ~ .water > label[for="fish1check"] > #fish-1 {
-    animation-play-state: running;
-    opacity: 1;
-}
+#foodcheck:checked ~ .water > label[for="foodcheck"] > #food,
 #revivecheck:checked ~ .water > label[for="revivecheck"] > #revive {
     opacity: 0;
+    pointer-events: none;
 }
-
