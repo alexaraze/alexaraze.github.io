@@ -97,13 +97,13 @@ body {
     position: absolute;
     width: 100vw;
     height: 20vh;
+    left: 20%;
     animation: swimandflip 40s forwards infinite linear;
     cursor: url('Images/feed.png'), auto;
 }
 
 #fish-1{
-    top: 20%;
-    left: 70%;
+    top: 10%;
     background: url('Images/fish-1.png') no-repeat;
     background-size: contain; 
     opacity: 1;
@@ -111,8 +111,7 @@ body {
 }
 
 #fish-2{
-    top: 33%;
-    left: 70%;
+    top: 20%;
     background: url('Images/fish-2.png') no-repeat;
     background-size: contain; 
     animation-play-state: paused;
@@ -121,8 +120,7 @@ body {
 }
 
 #fish-3{
-    top: 40%;
-    left: 70%;
+    top: 30%;
     background: url('Images/fish-3.png') no-repeat;
     background-size: contain; 
     transform: scaleX(-1);
@@ -132,8 +130,7 @@ body {
 }
 
 #fish-4{
-    top: 50%;
-    left: 70%;
+    top: 40%;
     background: url('Images/fish-4.png') no-repeat;
     background-size: contain; 
     animation-play-state: paused;
@@ -142,8 +139,7 @@ body {
 }
 
 #fish-5{
-    top: 58%;
-    left: 70%;
+    top: 50%;
     background: url('Images/fish-5.png') no-repeat;
     background-size: contain; 
     animation-play-state: paused;
@@ -152,8 +148,7 @@ body {
 }
 
 #fish-6{
-    top: 73%;
-    left: 70%;
+    top: 60%;
     background: url('Images/fish-6.png') no-repeat;
     background-size: contain; 
     animation-play-state: paused;
@@ -162,8 +157,7 @@ body {
 }
 
 #fish-7{
-    top: 80%;
-    left: 70%;
+    top: 70%;
     background: url('Images/fish-7.png') no-repeat;
     background-size: contain; 
     animation-play-state: paused;
@@ -175,14 +169,14 @@ body {
     0% {
         transform: translateX(-100%) scaleX(1);
     }
-    45% {
+    49% {
         transform: translateX(100%) scaleX(1);
     }
     50% {
-        transform: translateX(100%);
-    }
-    55% {
         transform: translateX(100%) scaleX(-1);
+    }
+    94% {
+        transform: translateX(-100%) scaleX(-1);
     }
     95% {
         transform: translateX(-100%) scaleX(-1);
@@ -219,9 +213,9 @@ body {
 
 /* CHECKBOXES */
 
-input {
+/* input {
     display: none;
-}
+} */
 
 #fish1check:checked ~ .water > label[for="fish2check"] > #fish-2,
 #fish2check:checked ~ .water > label[for="fish3check"] > #fish-3,
