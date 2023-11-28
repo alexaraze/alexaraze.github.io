@@ -23,7 +23,7 @@ body {
 /* TEXT */
 h1 {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 700;
+    font-size: 44px;
     font-weight: bold;
     text-align: left;
     color: white;
@@ -41,7 +41,8 @@ p {
 #name {
     position: fixed;
     z-index: 1;
-    padding: 20px;
+    left: 6vw;
+    top: 2vh;
     opacity: 0;
     animation: fadeIn 1s ease-in-out 2s forwards;
 }
