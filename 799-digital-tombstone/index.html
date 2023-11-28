@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Memory Lane</title>
+</head>
+    
+<body>
+    <div id="meadow">
+        <video id="background-video" autoplay muted loop>
+            <source src="Assets/meadow.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <div id="name">
+        <h1>Han Young Park<br>
+        박 한영 
+        </h1>
+        <!-- <p>"If you're going to do it, do it right."</p> -->
+    </div>
+
+    <!-- ELEMENT CHECKBOXES -->
+    <input type="checkbox" id="photos-check"></input>
+    <input type="checkbox" id="voice-recording-check"></input>
+    <input type="checkbox" id="chatbot-check"></input>
+
+    <!-- PHOTOS -->
+    <label for="photos-check">
+        <div id="photos-button" class="memory-button"></div>
+    </label>
+
+    <div id="photos-wrapper">
+        <div id="photo1" class="photo">
+            <img src="Assets/photo4.jpeg" alt="Photo 4">
+        </div>
+        <div id="photo2" class="photo">
+            <img src="Assets/photo3.jpg" alt="Photo 3">
+        </div>
+        <div id="photo3" class="photo">
+            <img src="Assets/photo5.jpg" alt="Photo 5">
+        </div>
+        <div id="photo4" class="photo">
+            <img src="Assets/photo2.jpg" alt="Photo 2">
+        </div>
+        <div id="photo5" class="photo">
+            <img src="Assets/photo1.jpg" alt="Photo 1">
+        </div>
+        </div>
+
+
+    <!-- VOICE RECORDING -->
+    <label for="voice-recording-check">
+        <div id="voice-recording-button" class="memory-button"></div>
+    </label>
+
+    <div id="voice-recording" class="hidden">
+        <audio controls>
+            <source src="Assets/voicemail.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+
+    <!-- CHATBOT -->
+    <label for="chatbot-check">
+        <div id="chatbot-button" class="memory-button"></div>
+    </label>
+
+    <div id="chat-wrapper">
+        <div id="chat-prompt">
+            What's on your mind?
+        </div>
+        <div id="chat-text">
+            What was your favourite childhood memory?
+        </div>
+    </div>
+    
+
+
+
+
+
+
+</body>
+</html>
+
+
+<!-- Questions
+
+
+-->
+
+
+
+<!-- TO DO:
+- Change chatbot to click
+- Add blinking text line to chatbot
+- Make responsive
+- Add background music
