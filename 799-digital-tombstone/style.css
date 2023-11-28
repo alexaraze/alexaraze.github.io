@@ -90,8 +90,8 @@ input {
 }
 
 #chatbot-button {
-    right: 30vw;
-    top: 75vh;
+    right: 10vw;
+    bottom: 13vh;
 }
 
 /* CHECKBOXES */
@@ -165,6 +165,13 @@ input {
 #photos-wrapper:hover #photo1 {
     transition: transform 2s ease-in-out;
     transform: translateX(520px);
+}
+#photos-wrapper:not(:hover) #photo4,
+#photos-wrapper:not(:hover) #photo3,
+#photos-wrapper:not(:hover) #photo2,
+#photos-wrapper:not(:hover) #photo1 {
+    transition: transform 2s ease-in-out;
+    transform: translateX(0);
 }
 
 /* VOICE RECORDING */
