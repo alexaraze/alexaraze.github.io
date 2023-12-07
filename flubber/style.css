@@ -3,11 +3,20 @@ html, body {
   padding: 0;
 }
 canvas {
+  position: absolute;
   display: block;
+  z-index: 2;
+}
+
+.background {
+  width: 100vw;
+  background: #ffffff;
+  z-index: -1;
 }
 
 .slidecontainer {
   width: 100%;
+  z-index: 3;
 }
 
 .slider {

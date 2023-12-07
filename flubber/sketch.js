@@ -27,6 +27,10 @@ function setup() {
   
 document.documentElement.style.setProperty("--slider-colour", color(backgroundColour[0], backgroundColour[1], backgroundColour[2]));
 
+  //set background colour
+  setbackground = select('.background');
+  setbackground.style('background', color(backgroundColour[0], backgroundColour[1], backgroundColour[2]));
+  
   // Set frame rate per second
   frameRate(5);
   // noLoop();
@@ -35,9 +39,8 @@ document.documentElement.style.setProperty("--slider-colour", color(backgroundCo
 
 function draw() {
   
-  // Set page background colour
-  background(backgroundColour); //Page colour
- 
+  background(backgroundColour);
+  
   //check slider value
   var radiusChange = slider.value();
   
