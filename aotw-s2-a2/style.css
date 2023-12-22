@@ -213,9 +213,9 @@ body {
 
 /* CHECKBOXES */
 
-/* input {
+input {
     display: none;
-} */
+}
 
 #fish1check:checked ~ .water > label[for="fish2check"] > #fish-2,
 #fish2check:checked ~ .water > label[for="fish3check"] > #fish-3,
